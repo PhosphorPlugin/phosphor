@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Phosphor</title><style>
+<link rel="icon" href="favicon.png"><title>Phosphor</title><style>
 :root{--bg:#0b2d4f;--bg2:#123f6b;--ink:#eaf6ff;--soft:#b9d4ea;--tan:#ff982e;--card:rgba(255,255,255,.07);--line:rgba(234,246,255,.16)}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;font:17px/1.6 "Segoe UI","Open Sans",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg2),var(--bg) 420px) fixed;background-color:var(--bg);min-height:100vh}
 header{border-bottom:1px solid var(--line)}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 header .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.brand{font-weight:700;font-size:22px;letter-spacing:.02em;color:var(--ink);text-decoration:none;margin-right:auto}
-.brand b{color:var(--tan)}
+.brand{margin-right:auto;display:flex}.brand img{height:36px;width:auto;display:block}
+.hero{display:block;width:100%;max-width:520px;height:auto;margin:0 0 22px}
 nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--soft);text-decoration:none;font-size:15px}
 nav a:hover,nav a[aria-current]{color:var(--tan)}
 main{padding:36px 0 56px}
@@ -22,8 +22,9 @@ ul{padding-left:22px}
 footer{border-top:1px solid var(--line);color:var(--soft);font-size:14px}
 footer .wrap{padding-top:18px;padding-bottom:28px}
 </style></head>
-<body><header><div class="wrap"><a class="brand" href="./">Phosphor<b>.</b></a><nav><a href="./" aria-current=page>About</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<body><header><div class="wrap"><a class="brand" href="./"><img src="logo.png" alt="Phosphor" height="36"></a><nav><a href="./" aria-current=page>About</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
 <main><div class="wrap">
+<img class="hero" src="logo_tv.png" alt="Phosphor">
 <h1>Live TV from your own library</h1>
 <p class="meta">A Roku app and Jellyfin plugin</p>
 <p>Phosphor turns the shows and movies on your own <strong>Jellyfin</strong> server into live TV channels, the way television used to be. Flip through a full program guide, see what's on now and what's coming up, and tune in to shows already in progress.</p>
