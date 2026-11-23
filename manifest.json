@@ -1,0 +1,29 @@
+[
+  {
+    "guid": "84b075dd-67c3-4741-bb9a-e1a5ba21ad49",
+    "name": "Phosphor",
+    "description": "Turns your Jellyfin library into live TV channels with a classic program guide, commercial breaks, station IDs, a local weather channel and music stations. Pairs with the Phosphor Roku app.",
+    "overview": "Live TV channels from your library",
+    "owner": "PhosphorPlugin",
+    "category": "Live TV",
+    "imageUrl": "https://phosphorplugin.github.io/phosphor/plugin/thumb.png",
+    "versions": [
+      {
+        "version": "1.0.0.11",
+        "changelog": "First release.",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://phosphorplugin.github.io/phosphor/plugin/phosphor_1.0.0.11.zip",
+        "checksum": "96b0b7d97a0191744b22e2d76c811aea",
+        "timestamp": "2026-11-18T12:47:46.0000000Z"
+      },
+      {
+        "version": "1.0.0.12",
+        "changelog": "First release.",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://phosphorplugin.github.io/phosphor/plugin/phosphor_1.0.0.12.zip",
+        "checksum": "6997f1331792ce0126fe8c9d6172637b",
+        "timestamp": "2026-11-18T12:47:46.0000000Z"
+      }
+    ]
+  }
+]
