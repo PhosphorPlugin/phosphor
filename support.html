@@ -1,33 +1,49 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor Support</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor Support</title><link rel="stylesheet" href="style.css?v=3"></head><body>
 <div class="page">
   <div class="mast">
     <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
     <span class="tag">Your library, on the air.</span>
-    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a></div>
     <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
   </div>
   <div class="tabs"><a href="./">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a class="on" href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="features.html">Take the Tour</a><span>|</span><a href="support.html">FAQ</a><span class="date">For Roku and Jellyfin &middot; Coming soon</span></div>
   <div class="cols inner">
     <div>
       <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li class="here"><a href="support.html">Getting help</a></li></ul></div>
-      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
       <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
       <div class="navbox"><div class="hd">Help</div><ul><li class="here"><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
     </div>
     <div class="content">
 
 <h1>Support</h1>
-<p class="meta">Help with the Phosphor Roku app and plugin</p>
-<div class="card"><p style="margin:0">Email <a href="mailto:phosphorplugin@proton.me"><strong>phosphorplugin@proton.me</strong></a> with what happened, what you expected, and which channel you were on. We usually reply within a few days.</p></div>
-<h2>The Roku app can't find my server</h2>
-<p>The app looks for Jellyfin servers on your home network by itself. If it doesn't find yours, type your server's address on the setup screen, for example <strong>http://192.168.1.20:8096</strong>. The Phosphor plugin's setup page shows the address to use under Help.</p>
-<h2>I don't see any channels</h2>
-<p>Channels come from the Phosphor plugin on your Jellyfin server. Open Jellyfin's dashboard on your computer, go to Plugins and then Phosphor, and create channels (or use Autobuild). Press Save, and the channels appear on your TVs.</p>
-<h2>A show won't play, or takes a long time to start</h2>
-<p>Most files play directly. Some formats have to be converted by your Jellyfin server first, which can take several seconds, especially without hardware acceleration turned on in Jellyfin's playback settings.</p>
-<h2>The weather channel is empty</h2>
-<p>Pick your location on the plugin's Weather page. Weather is available for locations in the United States.</p>
+<p class="meta">Answers to common questions about the Phosphor Roku app and plugin</p>
+<div class="card"><p style="margin:0">Still stuck? Email <a href="mailto:phosphorplugin@proton.me"><strong>phosphorplugin@proton.me</strong></a>. Tell us what happened, what you expected, and which channel you were on. We usually reply within a few days.</p></div>
+
+<h2>Getting started</h2>
+<h3>The Roku app can't find my server</h3>
+<p>The app looks for Jellyfin servers on your home network by itself. If it doesn't find yours, type your server's address on the sign-in screen, for example <strong>http://192.168.1.20:8096</strong>. The <strong>Help</strong> tab on Phosphor's setup page shows the exact address to use. Your Roku and your server need to be on the same home network.</p>
+<h3>I don't see any channels</h3>
+<p>Channels are made on your computer, not on the TV. Open Jellyfin's dashboard, choose <strong>Phosphor</strong> in the menu, and either let <strong>Autobuild</strong> make a lineup for you or create channels one at a time. Press <strong>Save</strong>, and the channels show up on your TVs.</p>
+<h3>Where do the commercials come from?</h3>
+<p>Phosphor doesn't come with any. Upload your own clips on the <strong>Clips</strong> tab of the setup page. Phosphor keeps them in a "Phosphor Clips" library that's hidden from Jellyfin's home screens.</p>
+
+<h2>Watching</h2>
+<h3>A show won't play, or takes a long time to start</h3>
+<p>Most files play right away. Some formats have to be converted by your Jellyfin server first, which can take several seconds. Turning on hardware acceleration in Jellyfin's <strong>Playback</strong> settings helps.</p>
+<h3>A show plays in the wrong language</h3>
+<p>Phosphor uses the audio language from your Jellyfin profile. In Jellyfin, go to <strong>Settings &rarr; Playback</strong> and set <strong>Preferred audio language</strong>, for example to English. If a file doesn't have that language, its default track plays.</p>
+<h3>Will Phosphor mark my shows as watched?</h3>
+<p>No. Nothing you see on Phosphor changes your watch history or your "Continue watching" list in Jellyfin.</p>
+<h3>The weather channel is empty</h3>
+<p>Pick your location on the <strong>Weather</strong> tab of the setup page. Weather works for locations in the United States only.</p>
+
+<h2>Parental controls</h2>
+<h3>I forgot the PIN</h3>
+<p>Open the setup page on your computer, type a new PIN and press <strong>Save</strong>. The new PIN replaces the old one on every TV.</p>
+<h3>How do I hide a channel?</h3>
+<p>Turn it off, either on the setup page or from the guide on your TV. A channel that's off stays hidden until you turn it back on.</p>
 
     </div>
   </div>
@@ -38,5 +54,5 @@
   </div>
 </div>
 <div class="below">This site is best viewed at 800&times;600 or higher.</div>
-<script src="zoom.js"></script>
+<script src="zoom.js?v=3"></script>
 </body></html>

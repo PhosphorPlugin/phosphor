@@ -1,36 +1,39 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Download Phosphor</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Download Phosphor</title><link rel="stylesheet" href="style.css?v=3"></head><body>
 <div class="page">
   <div class="mast">
     <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
     <span class="tag">Your library, on the air.</span>
-    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a></div>
     <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
   </div>
   <div class="tabs"><a href="./">Home</a><a href="features.html">Features</a><a class="on" href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="features.html">Take the Tour</a><span>|</span><a href="support.html">FAQ</a><span class="date">For Roku and Jellyfin &middot; Coming soon</span></div>
   <div class="cols inner">
     <div>
       <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li><a href="support.html">Getting help</a></li></ul></div>
-      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
       <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
       <div class="navbox"><div class="hd">Help</div><ul><li><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
     </div>
     <div class="content">
 
 <h1>Download</h1>
-<p class="meta">Phosphor has two parts: a plugin on your Jellyfin server, and an app on your Roku.</p>
+<p class="meta">Phosphor comes in two parts: a plugin for your Jellyfin server, and an app for your Roku. You need both.</p>
+<div class="card"><p style="margin:0"><strong>Phosphor isn't out yet.</strong> It's in its last round of testing. This page will have the links on release day.</p></div>
 
 <h2 id="plugin">1. The Jellyfin plugin</h2>
-<p>Works with <strong>Jellyfin 10.11 and 12</strong>. You'll add Phosphor to your server from Jellyfin's own plugin catalog, and Jellyfin will install the right version and let you know about updates.</p>
+<p>For <strong>Jellyfin 10.11 or later</strong>. You'll install it from the <strong>Plugins</strong> page in Jellyfin's dashboard, and Jellyfin will tell you when there's an update.</p>
 <p><span class="btn" style="opacity:.55;cursor:default">Coming soon</span></p>
+<p>Once it's installed, restart Jellyfin. <strong>Phosphor</strong> then shows up in the dashboard menu. That's where you build your channels.</p>
 
 <h2 id="roku">2. The Roku app</h2>
-<p>Phosphor for Roku is free in the <strong>Roku Channel Store</strong>.</p>
-<p><span class="btn" style="opacity:.55;cursor:default">Coming soon to the Roku Channel Store</span></p>
+<p>Free, from the <strong>Roku Streaming Store</strong>.</p>
+<p><span class="btn" style="opacity:.55;cursor:default">Coming soon</span></p>
 <ol class="step-note">
-<li>On your Roku, open <strong>Streaming Store</strong> (or the Roku mobile app) and search for <strong>Phosphor</strong>.</li>
+<li>On your Roku (or in the Roku mobile app), open the <strong>Streaming Store</strong> and search for <strong>Phosphor</strong>.</li>
 <li>Choose <strong>Add app</strong>.</li>
-<li>Open Phosphor. It finds your Jellyfin server on your home network by itself. If it doesn't, type the address the plugin shows under <strong>Help</strong>.</li>
+<li>Open Phosphor. It looks for your Jellyfin server on your home network. If it can't find it, type the address shown on the <strong>Help</strong> tab of Phosphor's setup page.</li>
+<li>Sign in with a Quick Connect code, or your Jellyfin username and password.</li>
 </ol>
 
 <h2>Need help?</h2>
@@ -45,5 +48,5 @@
   </div>
 </div>
 <div class="below">This site is best viewed at 800&times;600 or higher.</div>
-<script src="zoom.js"></script>
+<script src="zoom.js?v=3"></script>
 </body></html>

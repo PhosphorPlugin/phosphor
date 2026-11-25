@@ -1,32 +1,35 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor Privacy Policy</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor Privacy Policy</title><link rel="stylesheet" href="style.css?v=3"></head><body>
 <div class="page">
   <div class="mast">
     <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
     <span class="tag">Your library, on the air.</span>
-    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a></div>
     <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
   </div>
   <div class="tabs"><a href="./">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="support.html">Support</a><a class="on" href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="features.html">Take the Tour</a><span>|</span><a href="support.html">FAQ</a><span class="date">For Roku and Jellyfin &middot; Coming soon</span></div>
   <div class="cols inner">
     <div>
       <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li><a href="support.html">Getting help</a></li></ul></div>
-      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
       <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
       <div class="navbox"><div class="hd">Help</div><ul><li><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li class="here"><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
     </div>
     <div class="content">
 
 <h1>Privacy Policy</h1>
-<p class="meta">Effective November 18, 2026</p>
+<p class="meta">Effective November 25, 2026</p>
 <p>Phosphor is a Roku app and a Jellyfin server plugin. In short: <strong>we don't collect, store, sell or share any of your information.</strong> Phosphor talks to your own Jellyfin server, and your server is yours.</p>
 <h2>What the Roku app stores</h2>
 <p>To stay connected, the app saves your Jellyfin server's address and the sign-in token Jellyfin gives it, on your Roku device. It also remembers small settings on the device, like your favorite channels, reminders and recently shown commercials. This information stays on your Roku. You can remove it by signing out in the app or removing the app.</p>
 <h2>Where your information goes</h2>
 <p>The app only connects to the Jellyfin server you choose. Your username and password are sent to that server to sign in, the same way any Jellyfin app works. Phosphor's developer never receives them.</p>
 <p>The app does not include analytics, advertising, tracking or crash reporting from us or anyone else.</p>
+<h2>What the plugin stores</h2>
+<p>The Phosphor plugin runs on your Jellyfin server and keeps its settings there, including your channels and a short list of the TVs that use it (each TV's device ID, its name and when it was last seen). A TV that hasn't been seen for 90 days is removed from the list. A parental PIN is stored only in scrambled (hashed) form. None of this leaves your server.</p>
+
 <h2>The plugin and outside services</h2>
-<p>The Phosphor plugin runs on your Jellyfin server. If you set up the weather channel, your server requests forecasts, alerts and maps for the location you picked from these public services:</p>
+<p>If you set up the weather channel, your server requests forecasts, alerts and maps for the location you picked from these public services:</p>
 <ul>
 <li>The U.S. National Weather Service (api.weather.gov and mapservices.weather.noaa.gov)</li>
 <li>OpenStreetMap (map tiles)</li>
@@ -49,5 +52,5 @@
   </div>
 </div>
 <div class="below">This site is best viewed at 800&times;600 or higher.</div>
-<script src="zoom.js"></script>
+<script src="zoom.js?v=3"></script>
 </body></html>

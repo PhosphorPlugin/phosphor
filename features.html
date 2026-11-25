@@ -1,17 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor features: live TV from your Jellyfin library</title><meta name="description" content="Everything Phosphor does: a real program guide, channels and blocks, commercial breaks and promos, weather, music stations and more, all from the shows and movies on your own Jellyfin server."><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor features: live TV from your Jellyfin library</title><meta name="description" content="Everything Phosphor does: a real program guide, channels and blocks, commercial breaks and promos, weather, music stations and more, all from the shows and movies on your own Jellyfin server."><link rel="stylesheet" href="style.css?v=3"></head><body>
 <div class="page">
   <div class="mast">
     <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
     <span class="tag">Your library, on the air.</span>
-    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a></div>
     <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
   </div>
   <div class="tabs"><a href="./">Home</a><a class="on" href="features.html">Features</a><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="features.html">Take the Tour</a><span>|</span><a href="support.html">FAQ</a><span class="date">For Roku and Jellyfin &middot; Coming soon</span></div>
   <div class="cols inner">
     <div>
       <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li><a href="support.html">Getting help</a></li></ul></div>
-      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
       <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
       <div class="navbox"><div class="hd">Help</div><ul><li><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
     </div>
@@ -21,70 +21,72 @@
 <section class="top">
 <div class="eyebrow">Features</div>
 <h1>Real TV, from your own library</h1>
-<p class="lead">Phosphor turns the shows and movies on your Jellyfin server into channels that are always on: a guide to flip through, breaks between shows, promos for what's coming up, and a weather channel. Everything is set up from your computer, and every Roku in the house plays the same thing at the same moment.</p>
+<p class="lead">Phosphor turns the shows and movies on your Jellyfin server into channels that are always on, with a guide to flip through, commercial breaks, promos for what's coming up, and a weather channel. You set everything up from your computer, and every Roku in the house plays the same thing at the same moment.</p>
 <div class="jump"><a href="#guide">Guide</a><a href="#channels">Channels</a><a href="#breaks">Breaks</a><a href="#promos">Promos</a><a href="#onscreen">On screen</a><a href="#weather">Weather</a><a href="#music">Music</a><a href="#setup">Setup</a><a href="#build">Build a channel</a><a href="#home">Around the house</a></div>
 </section>
 
 <div class="feat sect" id="guide"><img class="shot" src="shots/guide.jpg" alt="The Phosphor program guide, with Night of the Living Dead highlighted and the channel playing in the corner" loading="lazy"><div>
 <div class="eyebrow">The guide</div><h2>Channel surf like it's 1999</h2>
-<p>A full program guide with channel logos, a clock, and the channel you're on playing in the corner. Highlight anything to see what it is, how long is left, and its rating.</p>
-<ul><li>Shows are already in progress when you tune in, just like real TV.</li><li>Favorites, categories and reminders for later.</li><li>Posters, art and descriptions come from Jellyfin, or pick your own in the image browser.</li></ul></div></div>
+<p>A full program guide with channel logos, a clock, and the channel you're on playing in the corner. Highlight anything to see what it is, how much is left, and its rating.</p>
+<ul><li>Shows are already in progress when you tune in, just like real TV.</li><li>Look up to two days ahead.</li><li>Mark favorite channels, sort them into categories, and set reminders for one airing or every airing.</li><li>Posters, pictures and descriptions come from Jellyfin, or you can pick your own.</li></ul></div></div>
 
 <div class="feat flip sect" id="channels"><img class="shot" src="shots/setup-schedule.jpg" alt="A channel's week of blocks on the setup page" loading="lazy"><div>
 <div class="eyebrow">Channels</div><h2>Channels that run themselves</h2>
-<p>Make a channel from shows, movies, genres or collections, and Phosphor keeps it on the air around the clock.</p>
-<ul><li><strong>Blocks:</strong> morning cartoons, afternoon reruns, prime time, a Friday night lineup, Saturday movie night.</li><li><strong>New episodes weekly:</strong> each show gets its night, with the occasional rerun.</li><li><strong>Rotation:</strong> shows come and go like seasons. When one finishes, the next one takes its spot.</li><li><strong>Marathons and specials:</strong> a week of one series, or a holiday night. They cut in on time, like real TV.</li><li><strong>Up to four rotating weeks</strong>, so the schedule never feels the same.</li></ul></div></div>
+<p>Make a channel from shows, movies, genres or collections, and Phosphor keeps it on the air around the clock. Pick one of these ways to schedule it:</p>
+<ul><li><strong>Blocks:</strong> morning cartoons, afternoon reruns, prime time, a Friday night lineup, Saturday movie night.</li><li><strong>New episodes weekly:</strong> each show gets its night, with the occasional rerun.</li><li><strong>Rotation:</strong> shows come and go like seasons. When one finishes, the next one takes its spot.</li><li><strong>Marathons and specials:</strong> a week of one series, or a holiday night, dropped into the regular schedule.</li><li><strong>Up to four different weeks</strong> that take turns, so the schedule doesn't repeat every seven days.</li></ul></div></div>
 
 <div class="feat sect" id="breaks"><img class="shot" src="shots/promo-pair.jpg" alt="A double feature promo in a commercial break" loading="lazy"><div>
 <div class="eyebrow">Breaks</div><h2>Commercials, bumpers and station IDs</h2>
-<p>Add your own vintage commercials and Phosphor fills the time between shows, so the next one starts on the half hour.</p>
-<ul><li>Leave it on automatic, or build the break piece by piece: station IDs, bumpers, a "coming up next" card.</li><li>Match commercials to the show's decade.</li><li>Keep 4:3 shows with 4:3 commercials.</li><li>An intro before a block or a movie, and a station ID at the top of the hour.</li></ul></div></div>
+<p>Add your own old commercials and Phosphor fills the time between shows with them, so the next show starts right on the hour or half hour.</p>
+<ul><li>Leave it on automatic, or build each break yourself from station IDs, bumpers and a "coming up next" card.</li><li>Play commercials from the same decade as the show.</li><li>Keep square (4:3) shows with square commercials.</li><li>Play an intro before a block or a movie, and a station ID at the top of the hour.</li></ul></div></div>
 
-<section class="sect" id="promos"><h2>Promos it makes for you</h2><p class="c">Each break can carry a short promo made from your own schedule and artwork: what's on tonight, the week ahead, a marathon coming up, or what's on another channel right now. Episode names, premieres and finales are added automatically.</p>
+<section class="sect" id="promos"><h2>Promos it makes for you</h2><p class="c">Phosphor makes short promos from your own schedule and pictures and plays them in the breaks: what's on tonight, a highlight later in the week, a marathon coming up, or what's on another channel right now. Episode names, premieres and finales are filled in for you.</p>
 <div class="gal">
 <figure><img class="shot" src="shots/promo-night.jpg" alt="A promo showing four movies side by side, with their start times" loading="lazy"><figcaption><b>The whole night.</b> Every show in tonight's block, with start times lighting up one by one.</figcaption></figure>
-<figure><img class="shot" src="shots/promo-roll.jpg" alt="A promo showing one movie full screen with its start time" loading="lazy"><figcaption><b>One after another.</b> Each show gets its moment, then the whole night together.</figcaption></figure>
-<figure><img class="shot" src="shots/promo-tonight.jpg" alt="A promo for a classic animated film coming on tomorrow morning" loading="lazy"><figcaption><b>Up next.</b> The next block, and the episode or movie it opens with.</figcaption></figure>
+<figure><img class="shot" src="shots/promo-roll.jpg" alt="A promo showing one movie of the night full screen, with its start time" loading="lazy"><figcaption><b>One after another.</b> Each show gets its moment, then the whole night together.</figcaption></figure>
+<figure><img class="shot" src="shots/promo-tonight.jpg" alt="A promo for an animated movie coming on tomorrow at 9:00" loading="lazy"><figcaption><b>Up next.</b> The next block, and the episode or movie it starts with.</figcaption></figure>
+<figure><img class="shot" src="shots/promo-later.jpg" alt="A promo for a silent movie coming on Sunday at 7:00" loading="lazy"><figcaption><b>Later this week.</b> A highlight a few days out, like a premiere, a finale or a movie night.</figcaption></figure>
 <figure><img class="shot" src="shots/promo-marathon.jpg" alt="A promo for a week-long silent movie marathon" loading="lazy"><figcaption><b>Marathons.</b> A heads-up for marathons and specials in the coming week.</figcaption></figure>
 <figure><img class="shot" src="shots/promo-week.jpg" alt="A promo listing the week's lineup" loading="lazy"><figcaption><b>This week.</b> A roundup of the week's blocks, a different day for each.</figcaption></figure>
+<figure><img class="shot" src="shots/promo-cross.jpg" alt="A promo for the movie on channel 103 right now" loading="lazy"><figcaption><b>Your other channels.</b> What's on another channel right now, with its logo.</figcaption></figure>
 <figure><img class="shot" src="shots/promo-rollend.jpg" alt="The end of a promo, with the night's lineup and times" loading="lazy"><figcaption><b>Your channel's mark.</b> Promos wear the channel's own watermark, wherever you've put it.</figcaption></figure>
 </div></section>
 
 <div class="feat flip sect" id="onscreen"><img class="shot" src="shots/setup-onscreen.jpg" alt="Watermark and banner settings for a channel" loading="lazy"><div>
 <div class="eyebrow">On screen</div><h2>The little touches</h2>
 <p>Everything that made TV feel like TV, placed where you want it and previewed right on the setup page.</p>
-<ul><li>A channel watermark, with its own logo, size, visibility and motion.</li><li>"Up next" banners before the next show.</li><li>Now · Next · Later strips, tickers and rating boxes.</li><li>A credits squeeze that shows what's coming on.</li></ul></div></div>
+<ul><li>A channel logo in the corner, with its own size, see-through level and motion.</li><li>"Up next" banners before the next show.</li><li>Now · Next · Later strips, scrolling tickers and rating boxes.</li><li>The end credits shrink to one side to show what's on next.</li></ul></div></div>
 
 <div class="feat sect" id="weather"><img class="shot" src="shots/weather.jpg" alt="The Phosphor weather channel showing current conditions" loading="lazy"><div>
 <div class="eyebrow">Weather</div><h2>Your local forecast, on loop</h2>
-<p>A weather channel with current conditions, tonight and tomorrow, the hourly and 7-day forecast, live radar, sunrise and moon phases, set to music from your library.</p>
-<p>Severe weather alerts can interrupt any channel, on every TV. (US only.)</p></div></div>
+<p>A weather channel with current conditions, tonight and tomorrow, the hourly and 7-day forecast, live radar, sunrise times and moon phases, set to music from your library.</p>
+<p>Severe weather warnings can break in on any channel, on every TV. Weather works for locations in the United States.</p></div></div>
 
 <div class="feat flip sect" id="music"><img class="shot" src="shots/music.jpg" alt="A classical music station playing, with its album art and what's coming up" loading="lazy"><div>
 <div class="eyebrow">Music</div><h2>Music stations</h2>
-<p>Turn your music library into stations that play around the clock, by genre, decade or artist, with full-screen album art and what's playing next.</p></div></div>
+<p>Turn your music library into stations that play around the clock, by genre, decade or artist, with full-screen album art and a list of what's coming up.</p></div></div>
 
 <div class="feat sect" id="setup"><img class="shot" src="shots/setup-promos.jpg" alt="The Phosphor setup page, showing a channel's promo settings with a preview" loading="lazy"><div>
 <div class="eyebrow">Setup</div><h2>Set it up from your computer</h2>
-<p>The Phosphor plugin adds a setup page to your Jellyfin server. Every option has a sensible default, and you can see the result before it reaches your TVs.</p>
-<ul><li><strong>Autobuild</strong> makes a whole lineup in one click: sitcoms, dramas, cartoons, movies by decade.</li><li>Step-by-step channel setup, with a preview of what will air.</li><li>A live copy of the guide, the weather and every promo, right on the page.</li><li>Back up and restore everything in one file.</li></ul></div></div>
+<p>The Phosphor plugin adds a setup page to your Jellyfin server. Every option starts with a sensible setting, and you can see the result before it reaches your TVs.</p>
+<ul><li><strong>Autobuild</strong> makes a whole lineup in one click: sitcoms, dramas, cartoons, movies by decade.</li><li>Set up a channel step by step, with a preview of what will air.</li><li>See the guide, the weather and every promo right on the page.</li><li>Save all your settings to one file, and bring them back later.</li></ul></div></div>
 
-<section class="sect" id="build"><h2>Build a channel, step by step</h2><p class="c">Each channel has its own tabs: what it plays, when, what's in the breaks, what's on screen, its promos and its artwork. Every step has sensible defaults, so you only change what you want.</p>
+<section class="sect" id="build"><h2>Build a channel, step by step</h2><p class="c">Each channel has its own tabs: what it plays, when it plays it, what's in the breaks, what's on screen, its promos and its pictures. Every step starts with a sensible setting, so you only change what you want to.</p>
 <div class="gal">
 <figure><img class="shot" src="shots/setup-lineup.jpg" alt="A channel's lineup of movies" loading="lazy"><figcaption><b>Lineup.</b> Add shows, movies, genres or collections from your library.</figcaption></figure>
-<figure><img class="shot" src="shots/setup-schedule.jpg" alt="A week of blocks on the schedule" loading="lazy"><figcaption><b>Schedule.</b> Drag blocks onto the week, and the rest of the day fills itself.</figcaption></figure>
+<figure><img class="shot" src="shots/setup-schedule.jpg" alt="A week of blocks on the schedule" loading="lazy"><figcaption><b>Schedule.</b> Drag blocks onto the week, and Phosphor fills in the rest of the day.</figcaption></figure>
 <figure><img class="shot" src="shots/setup-breaks.jpg" alt="Break settings for a channel" loading="lazy"><figcaption><b>Breaks.</b> Commercials fill the gaps on their own, with intros before each block.</figcaption></figure>
-<figure><img class="shot" src="shots/setup-artwork.jpg" alt="Choosing the guide picture for a movie" loading="lazy"><figcaption><b>Artwork.</b> Pick the picture and logo the guide shows for each title, or use your own.</figcaption></figure>
+<figure><img class="shot" src="shots/setup-artwork.jpg" alt="Choosing the guide picture for a movie" loading="lazy"><figcaption><b>Pictures.</b> Choose the picture and logo the guide shows for each title, or upload your own.</figcaption></figure>
 </div></section>
 
 <section class="sect" id="home"><h2>Around the house</h2><p class="c">Made for the whole family and every TV.</p>
 <div class="grid">
-<div class="tile"><h3>Every TV in sync</h3><p>All your Rokus play the same channel at the same moment.</p></div>
-<div class="tile"><h3>Parental controls</h3><p>Lock channels with a PIN, cap the rating, or keep grown-up shows for late night.</p></div>
-<div class="tile"><h3>Easy sign-in</h3><p>Sign in on the TV with a Quick Connect code from your phone.</p></div>
-<div class="tile"><h3>Your watch history stays yours</h3><p>What plays on Phosphor never counts as watched in Jellyfin.</p></div>
-<div class="tile"><h3>The right language</h3><p>Picks the audio track in your preferred language when a show has one.</p></div>
-<div class="tile"><h3>Old shows look right</h3><p>Set each TV for 16:9 or 4:3, and keep older shows in their own shape.</p></div>
+<div class="tile"><h3>Every TV in sync</h3><p>Every Roku in the house shows the same thing on the same channel at the same moment.</p></div>
+<div class="tile"><h3>Parental controls</h3><p>Lock channels with a PIN, set a highest rating, or save grown-up shows for late at night.</p></div>
+<div class="tile"><h3>Easy sign-in</h3><p>Sign in on the TV by typing a short Quick Connect code into Jellyfin on your phone. No typing passwords with the remote.</p></div>
+<div class="tile"><h3>Your watch history stays yours</h3><p>Nothing you see on Phosphor counts as watched in Jellyfin, so your "Continue watching" list stays as it was.</p></div>
+<div class="tile"><h3>The right language</h3><p>Plays each show in the audio language set in your Jellyfin profile, whenever the file has it.</p></div>
+<div class="tile"><h3>Old shows look right</h3><p>Set each TV for a wide or square screen, and older shows keep their own shape.</p></div>
 </div></section>
 
 <div class="credits">
@@ -102,5 +104,5 @@
   </div>
 </div>
 <div class="below">This site is best viewed at 800&times;600 or higher.</div>
-<script src="zoom.js"></script>
+<script src="zoom.js?v=3"></script>
 </body></html>

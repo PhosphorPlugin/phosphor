@@ -8,6 +8,26 @@
     return img.alt || (b ? b.textContent : '') || 'Screenshot';
   }
 
+  // the pop-up carries its own look, so it works even if an older style.css is still cached
+  var st = document.createElement('style');
+  st.textContent =
+    '.zoomable{cursor:zoom-in}' +
+    '.zoomable:hover{border-color:#ef7f12!important}' +
+    '.zoomable:focus-visible{outline:2px solid #ef7f12;outline-offset:2px}' +
+    'html.zooming{overflow:hidden}' +
+    '.zoom{position:fixed;inset:0;z-index:100;background:rgba(6,26,46,.82);display:flex;align-items:center;justify-content:center;padding:16px}' +
+    '.zoom[hidden]{display:none}' +
+    '.zwin{background:#fff;border:1px solid #061a2e;border-radius:7px 7px 3px 3px;box-shadow:0 0 0 4px rgba(120,170,220,.25),0 10px 40px rgba(0,0,0,.6);' +
+    '  max-width:min(1280px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden}' +
+    '.zbar{display:flex;align-items:center;gap:10px;padding:5px 6px 5px 10px;background:linear-gradient(#2f6aa3,#0b3a6a);color:#fff;font:bold 11px Verdana,sans-serif}' +
+    '.zbar span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
+    '.zx{font:bold 15px/1 Verdana,sans-serif;width:22px;height:20px;padding:0;color:#fff;background:linear-gradient(#e8745a,#b83a1e);border:1px solid #7a1f0c;border-radius:3px;cursor:pointer}' +
+    '.zpic{padding:8px;background:#eef2f6;min-height:0;display:flex}' +
+    '.zpic img{display:block;max-width:100%;max-height:calc(100vh - 120px);margin:auto;border:1px solid #9fb0c2;background:#000}' +
+    '.zfoot{display:flex;align-items:center;gap:8px;padding:6px 8px;border-top:1px solid #d3dbe4;background:linear-gradient(#f4f7fa,#dde5ee);font-size:11px;color:#445}' +
+    '.zfoot .zcount{flex:1;text-align:center}';
+  document.head.appendChild(st);
+
   var box = document.createElement('div');
   box.className = 'zoom';
   box.hidden = true;
