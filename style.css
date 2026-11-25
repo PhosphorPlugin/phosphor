@@ -1,0 +1,140 @@
+/* Phosphor, the way company sites looked around 2001-2005: fixed width, tabs, side columns, small type. */
+*{box-sizing:border-box}
+body{margin:0;background:#0b2d4f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%230b2d4f'/%3E%3Crect width='1' height='1' fill='%23123b63'/%3E%3C/svg%3E");
+  font:12px/1.45 Verdana,Tahoma,Geneva,sans-serif;color:#222}
+a{color:#1458a8;text-decoration:none}a:hover{text-decoration:underline;color:#e0730c}
+.page{width:900px;margin:0 auto;background:#fff;border-left:1px solid #061a2e;border-right:1px solid #061a2e;box-shadow:0 0 0 4px rgba(120,170,220,.18),0 0 30px rgba(0,0,0,.45)}
+
+/* masthead */
+.mast{height:78px;position:relative;background:#fff;border-bottom:1px solid #c9d3de}
+.mast img{position:absolute;left:18px;top:20px;height:40px}
+.mast .tag{position:absolute;left:250px;top:39px;font:italic 13px Georgia,"Times New Roman",serif;color:#5a6b7d}
+.util{position:absolute;right:14px;top:10px;font-size:11px;color:#667}
+.util a{color:#335}
+.jumpto{position:absolute;right:14px;top:40px;font-size:11px;color:#445}
+.jumpto select{font:11px Verdana,sans-serif;margin:0 4px}
+.go{font:bold 11px Verdana,sans-serif;color:#fff;background:linear-gradient(#ffad55,#ef7f12);border:1px solid #b85d05;border-radius:3px;padding:2px 7px;cursor:pointer}
+
+/* tabs */
+.tabs{height:32px;padding:0 12px;background:linear-gradient(#f4f7fa,#dde5ee);border-bottom:4px solid #0b3a6a;display:flex;align-items:flex-end;gap:3px}
+.tabs a{display:block;padding:6px 16px 5px;font:bold 12px Verdana,sans-serif;color:#24435f;background:linear-gradient(#ffffff,#d5dfea);
+  border:1px solid #a9b8c8;border-bottom:0;border-radius:7px 7px 0 0}
+.tabs a:hover{text-decoration:none;color:#0b3a6a;background:linear-gradient(#fff,#e9f0f7)}
+.tabs a.on{color:#fff;background:linear-gradient(#2f6aa3,#0b3a6a);border-color:#0b3a6a}
+.sub{background:#0b3a6a;color:#9fc3e6;font-size:11px;padding:4px 14px 6px;display:flex;gap:4px}
+.sub a{color:#fff;font-weight:bold}.sub span{color:#6f93b8}
+.sub .date{margin-left:auto;color:#9fc3e6}
+
+/* three columns */
+.cols{display:grid;grid-template-columns:170px 1fr 190px;gap:14px;padding:14px}
+.navbox{margin-bottom:12px}
+.hd{font:bold 11px Verdana,sans-serif;color:#fff;padding:4px 8px;background:linear-gradient(#8b9bb0,#6c7e95);border-radius:5px 5px 0 0;letter-spacing:.02em}
+.hd.navy{background:linear-gradient(#2f6aa3,#0b3a6a)}
+.hd.orange{background:linear-gradient(#ffad55,#ea7a10)}
+.navbox ul{list-style:none;margin:0;padding:6px 8px 8px;background:#eef2f6;border:1px solid #d3dbe4;border-top:0}
+.navbox li{padding:2px 0}
+.navbox li a{color:#3a4a5c}.navbox li a:hover{color:#e0730c}
+.navbox li.new a::after{content:" NEW";font-size:9px;font-weight:bold;color:#e0730c}
+
+/* the big promo box */
+.feature{border:1px solid #b9c6d4;border-radius:8px;padding:14px 16px 12px;background:linear-gradient(#fff 60%,#eef3f8)}
+.feature h1{margin:0 0 2px;font:normal 24px/1.15 "Trebuchet MS","Lucida Grande",Verdana,sans-serif;color:#0b3a6a;letter-spacing:-.01em}
+.feature h1 span{color:#8796a8}
+.feature .shot{display:block;width:100%;margin:10px 0 8px;border:1px solid #9fb0c2}
+.feature .row{display:flex;align-items:flex-end;gap:14px}
+.bul{margin:0;padding:0;list-style:none;flex:1}
+.bul li{font-weight:bold;padding:1px 0 1px 12px;position:relative;font-size:11.5px}
+.bul li::before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:#ea7a10}
+.bul li.red{color:#d0560a}
+.dl{display:block;text-align:center;text-decoration:none!important;color:#fff;background:linear-gradient(#ffb260,#ef7f12 55%,#d86a05);
+  border:1px solid #a9520a;border-radius:6px;padding:7px 18px 8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 0 #a9520a}
+.dl b{display:block;font:bold 20px/1 "Trebuchet MS",Verdana,sans-serif;letter-spacing:.02em}
+.dl small{display:block;font-size:10.5px;color:#fff3e4;margin-top:2px}
+.dl:hover{filter:brightness(1.06);color:#fff}
+.more{font-size:11px;margin-top:8px}
+.more::before{content:"\25B8  ";color:#ea7a10}
+
+/* section boxes, with a "More" link in the title bar */
+.sec{margin-top:14px;border:1px solid #c3cfdc}
+.sec .bar{display:flex;justify-content:space-between;align-items:center;font:bold 12px Verdana,sans-serif;color:#fff;padding:4px 8px;background:linear-gradient(#2f6aa3,#0b3a6a)}
+.sec .bar a{color:#ffc27a;font-size:11px}.sec .bar a::before{content:"\BB  "}
+.sec .in{padding:10px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.thumbs img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid #9fb0c2}
+.thumbs b{display:block;margin-top:4px;color:#0b3a6a}.thumbs span{color:#666;font-size:11px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.news .item{padding:6px 0;border-bottom:1px dotted #b9c6d4}
+.news .item:last-child{border:0}
+.news time{display:block;font-size:10.5px;color:#888}
+.news b{color:#d0560a}
+.chk{margin:0;padding:0 0 0 16px}.chk li{margin:2px 0}
+
+/* right column */
+.box{border:1px solid #d3dbe4;background:#f5f7fa;margin-bottom:12px}
+.box .in{padding:8px 9px;font-size:11px}
+.box p{margin:0 0 6px}
+.box .big{font:bold 15px "Trebuchet MS",Verdana,sans-serif;color:#0b3a6a;margin:0 0 4px}
+.req{margin:0;padding:0;list-style:none}.req li{padding:3px 0;border-bottom:1px dotted #c3cfdc}.req li:last-child{border:0}
+.req b{display:block;color:#0b3a6a}
+.buttons{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;padding:8px}
+.b88{width:88px;height:31px;display:flex;flex-direction:column;justify-content:center;align-items:center;font:bold 9px/1.1 Verdana,sans-serif;text-align:center;border:1px solid #333;letter-spacing:.02em}
+.b88.a{background:linear-gradient(#0b3a6a 50%,#ea7a10 50%);color:#fff}
+.b88.b{background:#fff;color:#0b3a6a;border-color:#0b3a6a}
+.b88.c{background:linear-gradient(#e9f2fb,#b9d1ea);color:#0b3a6a}
+.b88.d{background:#111;color:#7dff7d;font-family:"Courier New",monospace}
+
+/* footer */
+.foot{border-top:4px solid #0b3a6a;background:linear-gradient(#eef2f6,#dde5ee);text-align:center;font-size:11px;color:#556;padding:10px 10px 14px}
+.foot a{color:#1458a8}
+.foot .links{margin-bottom:6px}
+.foot small{display:block;color:#778;font-size:10px;margin-top:4px}
+.below{width:900px;margin:8px auto 30px;text-align:center;font-size:10px;color:#8fb2d6}
+
+@media (max-width:920px){
+  .page,.below{width:auto}
+  .cols{grid-template-columns:1fr}
+  .two,.thumbs{grid-template-columns:1fr}
+  .mast{height:auto;padding:14px 14px 10px}.mast img,.util,.jumpto,.mast .tag{position:static;display:block;margin-top:6px}
+  .tabs{overflow-x:auto;height:auto;padding-top:6px}
+  .tabs a{padding:6px 10px 5px;white-space:nowrap}
+}
+
+/* inner pages: a section list on the left, the page on the right */
+.cols.inner{grid-template-columns:170px 1fr}
+.content{min-width:0}
+.content h1{margin:0 0 2px;font:normal 24px/1.2 "Trebuchet MS","Lucida Grande",Verdana,sans-serif;color:#0b3a6a}
+.content .meta,.content .lead{color:#667;font-size:12px;margin:0 0 12px}
+.content .lead{font-size:13px;color:#334}
+.content h2{font:bold 14px "Trebuchet MS",Verdana,sans-serif;color:#0b3a6a;margin:18px 0 6px;padding-bottom:3px;border-bottom:1px dotted #9fb0c2}
+.content h3{font:bold 12px Verdana,sans-serif;color:#0b3a6a;margin:0 0 4px}
+.content p,.content li{font-size:12px}
+.content ul,.content ol{padding-left:20px}
+.content .card{border:1px solid #d3dbe4;background:#f5f7fa;padding:8px 10px;margin:10px 0}
+.content .btn{display:inline-block;font:bold 12px Verdana,sans-serif;color:#fff;background:linear-gradient(#ffb260,#ef7f12 55%,#d86a05);border:1px solid #a9520a;border-radius:5px;padding:5px 14px}
+.eyebrow{font:bold 10px Verdana,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#d0560a}
+.top .eyebrow{display:none}
+.top{border:1px solid #b9c6d4;border-radius:8px;padding:12px 14px;background:linear-gradient(#fff 60%,#eef3f8);margin-bottom:6px}
+.top h1{margin-bottom:6px}
+.jump{position:static;font-size:11px}
+.content .jump a{white-space:nowrap}
+.content .jump a+a::before{content:" | ";color:#9aa;text-decoration:none;display:inline-block;margin:0 3px}
+.content .jump::before{content:"Jump to: ";font-weight:bold;color:#445}
+.feat{display:grid;grid-template-columns:250px 1fr;gap:14px;align-items:start;border:1px solid #c3cfdc;padding:10px;margin-top:14px}
+.feat.flip>.shot,.feat.flip>figure{order:0}
+.feat h2{border:0;margin:2px 0 6px;padding:0;font-size:16px}
+.shot{display:block;width:100%;height:auto;border:1px solid #9fb0c2}
+.feat>.shot{aspect-ratio:16/9;object-fit:cover}
+.sect{margin-top:14px}
+section.sect{border:1px solid #c3cfdc;padding:0 10px 10px}
+section.sect>h2{margin:0 -10px 10px;padding:4px 8px;font:bold 12px Verdana,sans-serif;color:#fff;border:0;background:linear-gradient(#2f6aa3,#0b3a6a)}
+.sect>p.c{margin:0 0 10px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal figure{margin:0}
+.gal figcaption{font-size:11px;color:#556;margin-top:3px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{border:1px solid #d3dbe4;background:#f5f7fa;padding:8px 10px}
+.tile p{margin:0;font-size:11px;color:#445}
+.credits{font-size:10.5px;color:#778;border-top:1px dotted #9fb0c2;margin-top:16px;padding-top:6px}
+.credits p{margin:3px 0}
+.navbox li.here a{font-weight:bold;color:#0b3a6a}
+@media (max-width:920px){.cols.inner{grid-template-columns:1fr}.feat,.gal,.grid{grid-template-columns:1fr}}

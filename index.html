@@ -1,103 +1,74 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor: live TV from your Jellyfin library</title><meta name="description" content="Phosphor turns the shows and movies on your own Jellyfin server into live TV channels on Roku, with a program guide, commercial breaks, weather and music stations."><style>
-:root{--bg:#0b2d4f;--bg2:#123f6b;--ink:#eaf6ff;--soft:#b9d4ea;--tan:#ff982e;--card:rgba(255,255,255,.07);--line:rgba(234,246,255,.16)}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font:17px/1.6 "Segoe UI","Open Sans",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg2),var(--bg) 420px) fixed;background-color:var(--bg);min-height:100vh}
-header{border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.brand{margin-right:auto;display:flex}.brand img{height:36px;width:auto;display:block}
-.hero{display:block;width:100%;max-width:520px;height:auto;margin:0 0 22px}
-nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--soft);text-decoration:none;font-size:15px}
-nav a:hover,nav a[aria-current]{color:var(--tan)}
-main{padding:36px 0 56px}
-h1{font-size:34px;line-height:1.2;margin:0 0 6px;font-weight:600}
-h2{font-size:21px;margin:34px 0 8px;font-weight:600}
-p,li{color:var(--soft)}strong{color:var(--ink)}
-a{color:var(--tan)}
-.meta{color:var(--soft);font-size:14px;margin-bottom:26px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:18px 0}
-ul{padding-left:22px}
-footer{border-top:1px solid var(--line);color:var(--soft);font-size:14px}
-footer .wrap{padding-top:18px;padding-bottom:28px}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor: live TV from your Jellyfin library</title><meta name="description" content="Phosphor turns the shows and movies on your own Jellyfin server into live TV channels on Roku, with a program guide, commercial breaks, weather and music stations."><link rel="stylesheet" href="style.css"></head><body>
+<div class="page">
+  <div class="mast">
+    <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
+    <span class="tag">Your library, on the air.</span>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
+  </div>
+  <div class="tabs"><a class="on" href="./">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="cols">
+    <div>
+      <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li><a href="support.html">Getting help</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
+      <div class="navbox"><div class="hd">Help</div><ul><li><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
+    </div>
+    <div>
+      <div class="feature">
+        <h1>Phosphor 1.1. <span>Real TV, from your own library.</span></h1>
+        <img class="shot" src="shots/guide.jpg" alt="The Phosphor program guide on a TV">
+        <div class="row">
+          <ul class="bul">
+            <li class="red">New in version 1.1:</li>
+            <li>Promos for the whole night and the week ahead</li>
+            <li>A two-day program guide</li>
+            <li>Reminders for the next airing, or every airing</li>
+          </ul>
+          <a class="dl" href="download.html"><b>DOWNLOAD</b><small>Phosphor 1.1 &middot; free</small></a>
+        </div>
+        <div class="more"><a href="features.html">Learn more about everything in Phosphor</a></div>
+      </div>
 
-.wrap.wide{max-width:1080px}
-.top{padding:56px 0 30px;text-align:center}
-.top h1{font-size:46px;margin-bottom:12px}
-.top p.lead{font-size:20px;max-width:640px;margin:0 auto 26px}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none}
-.btn.pri{background:var(--tan);color:#0b2d4f}.btn.sec{border:1px solid var(--line);color:var(--ink)}
-.shot{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--card);box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.feat.solo{grid-template-columns:1fr;max-width:640px}
-.top .shot{max-width:960px;margin:40px auto 0}
-.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin:70px 0}
-.feat.flip .shot{order:2}
-.feat h2{margin-top:0;font-size:26px}
-.eyebrow{color:var(--tan);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 10px}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.tile b{display:block;color:var(--ink);margin-bottom:4px}
-.tile span{color:var(--soft);font-size:15px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
-.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 18px 60px;position:relative}
-.steps div::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--tan);color:#0b2d4f;font-weight:700;display:flex;align-items:center;justify-content:center}
-.steps b{color:var(--ink);display:block}
-.sect{margin:80px 0}
-.sect>h2{font-size:30px;text-align:center;margin-bottom:6px}
-.sect>p.c{text-align:center;margin:0 auto 26px;max-width:620px}
-@media(max-width:760px){.feat,.grid,.steps{grid-template-columns:1fr}.feat.flip .shot{order:0}.top h1{font-size:34px}}
-</style></head><body>
-<header><div class="wrap wide"><a class="brand" href="./"><img src="logo.png" alt="Phosphor" height="36"></a><nav><a href="./" aria-current="page">About</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
-<main style="padding:0"><div class="wrap wide">
-<section class="top">
-<div class="eyebrow">For Roku and Jellyfin</div>
-<h1>Your library, on the air.</h1>
-<p class="lead">Phosphor turns the shows and movies on your own Jellyfin server into real TV channels, with a program guide, commercial breaks and something always on.</p>
-<div class="btns"><a class="btn pri" href="download.html">Download</a><a class="btn sec" href="#how">How it works</a></div>
-<img class="shot" src="shots/guide.jpg" alt="The Phosphor program guide on a TV" loading="lazy" onerror="phNoShot(this)">
-</section>
+      <div class="sec"><div class="bar">Screenshots <a href="features.html">More screenshots</a></div><div class="in thumbs">
+        <div><img src="shots/promo-night.jpg" alt=""><b>Promos</b><span>Tonight's lineup, made for you</span></div>
+        <div><img src="shots/weather.jpg" alt=""><b>Weather channel</b><span>Your forecast, on loop</span></div>
+        <div><img src="shots/music.jpg" alt=""><b>Music stations</b><span>Your albums, around the clock</span></div>
+      </div></div>
 
-<div class="feat"><img class="shot" src="shots/details.jpg" alt="The guide with a show’s details" loading="lazy" onerror="phNoShot(this)"><div>
-<div class="eyebrow">The guide</div><h2>Channel surf like it's 1999</h2>
-<p>Flip through a full program guide with channel logos, show details and a live preview in the corner. Shows are already in progress when you tune in, just like real TV. Set reminders for later and favorite the channels you love.</p>
-<p>Posters, artwork and descriptions come straight from your Jellyfin library, so the guide looks right from the start. Want something different? Give any channel its own logo, or pick the artwork shown for each show.</p></div></div>
-
-<div class="feat flip"><img class="shot" src="shots/setup-promos.jpg" alt="Setting up a channel in the Phosphor plugin" style="aspect-ratio:auto" loading="lazy" onerror="phNoShot(this)"><div>
-<div class="eyebrow">Autobuild</div><h2>A whole lineup in one click</h2>
-<p>Autobuild looks through your library and builds channels for you: sitcoms, dramas, cartoons, movies by decade, holiday channels and more. Each night gets a prime-time lineup with a new episode every week, and the rest of the day fills with reruns.</p></div></div>
-
-<div class="feat"><img class="shot" src="shots/promo-pair.jpg" alt="A double feature promo during a break" loading="lazy" onerror="phNoShot(this)"><div>
-<div class="eyebrow">Breaks</div><h2>Commercials, bumpers and station IDs</h2>
-<p>Add your own vintage commercials and Phosphor fills the time between shows the way TV used to, with "coming up next" cards, station IDs and bumpers, even matching '80s ads to '80s shows. It even makes its own promos for what's on later.</p></div></div>
-
-<div class="feat flip"><img class="shot" src="shots/weather.jpg" alt="The Phosphor weather channel" loading="lazy" onerror="phNoShot(this)"><div>
-<div class="eyebrow">Weather</div><h2>Your local forecast, on loop</h2>
-<p>A weather channel with current conditions, the 7-day forecast, live radar and severe weather alerts for your area, set to music from your library. (US only.)</p></div></div>
-
-<div class="feat"><img class="shot" src="shots/music.jpg" alt="A Phosphor music station" loading="lazy" onerror="phNoShot(this)"><div>
-<div class="eyebrow">Music</div><h2>Music stations</h2>
-<p>Turn your music library into stations that play around the clock, with full-screen album art and what's coming up next.</p></div></div>
-
-<section class="sect"><h2>And a lot more</h2><p class="c">Everything is set up from your computer, in the Phosphor plugin on your Jellyfin server. <a href="features.html">See every feature</a></p>
-<div class="grid">
-<div class="tile"><b>Seasonal channels</b><span>Holiday channels that show up only in December, or a marathon weekend that happens once.</span></div>
-<div class="tile"><b>Rotating weeks</b><span>Up to four different weeks that take turns, so the schedule never feels stale.</span></div>
-<div class="tile"><b>Crossover events</b><span>Multi-part crossovers air back to back, in the right order.</span></div>
-<div class="tile"><b>Parental locks</b><span>Lock channels with a PIN, cap the rating, or keep grown-up shows for late night.</span></div>
-<div class="tile"><b>Your art, your way</b><span>Artwork and descriptions come from Jellyfin, or swap in your own channel logos and show art.</span></div>
-<div class="tile"><b>On-screen extras</b><span>Channel watermarks, "up next" banners, tickers and rating boxes.</span></div>
-<div class="tile"><b>Prime time</b><span>Every show gets its own night, with a new episode each week and the odd rerun.</span></div>
-<div class="tile"><b>Reminders</b><span>Set a reminder from the guide and get a heads-up before the show starts.</span></div>
-<div class="tile"><b>Every TV in the house</b><span>All your Rokus stay in sync: same channel, same moment.</span></div>
-</div></section>
-
-<section class="sect" id="how"><h2>How it works</h2><p class="c">Phosphor doesn't include any shows or movies. It plays what's already on your server.</p>
-<div class="steps">
-<div><b>Install the plugin</b>Add Phosphor to your Jellyfin server from its plugin catalog. <a href="download.html">How</a></div>
-<div><b>Build your channels</b>Use Autobuild, or set up each channel yourself from your computer.</div>
-<div><b>Watch on Roku</b>Open the Phosphor app. It finds your server on its own.</div>
-</div></section>
-</div></main>
-<footer><div class="wrap wide">Screenshots show public-domain films and art. Phosphor is an independent project and is not affiliated with Jellyfin or Roku. Questions: <a href="mailto:phosphorplugin@proton.me">phosphorplugin@proton.me</a></div></footer>
-<script>function phNoShot(i){var f=i.closest(".feat");if(f){f.classList.add("solo");}i.remove();}</script>
+      <div class="two">
+        <div class="sec" id="news"><div class="bar">News <a href="features.html">More news</a></div><div class="in news">
+          <div class="item"><time>Nov 23, 2026</time><b>Phosphor 1.1 is here</b><br>Promos for the whole night, a two-day guide and reminders that follow a show. <a href="features.html">Read more &raquo;</a></div>
+          <div class="item"><time>Oct 2026</time><b>Weather channel redesign</b><br>Radar, severe weather alerts and a new sky screen. <a href="features.html">Read more &raquo;</a></div>
+        </div></div>
+        <div class="sec" id="how"><div class="bar">How it works</div><div class="in">
+          <ol class="chk">
+            <li><b>Install the plugin</b> on your Jellyfin server.</li>
+            <li><b>Build your channels</b> with Autobuild, or one at a time.</li>
+            <li><b>Watch on Roku.</b> The app finds your server by itself.</li>
+          </ol>
+          <p style="margin:8px 0 0;color:#666;font-size:11px">Phosphor doesn't include any shows or movies. It plays what's already on your server.</p>
+        </div></div>
+      </div>
+    </div>
+    <div>
+      <div class="box"><div class="hd navy">Welcome</div><div class="in">
+        <p class="big">Always something on.</p>
+        <p>Channels that run all day, a guide to flip through, commercials between shows and a weather channel, all from the shows and movies you already have.</p>
+        <p><a href="features.html">Take the tour &raquo;</a></p></div></div>
+      <div class="box"><div class="hd">System requirements</div><div class="in"><ul class="req">
+        <li><b>Server</b>Jellyfin 10.11 or later</li><li><b>TV</b>A Roku player or Roku TV</li><li><b>Setup</b>A web browser on your computer</li></ul></div></div>
+      <div class="box"><div class="hd orange">Free</div><div class="in"><p class="big" style="color:#d0560a">No ads. No tracking.</p><p>Phosphor is free, and nothing you watch leaves your house. <a href="privacy.html">Privacy &raquo;</a></p></div></div>
+      <div class="box"><div class="buttons">
+        <span class="b88 a">GET<br>PHOSPHOR</span><span class="b88 b">MADE FOR<br>ROKU</span><span class="b88 c">BEST VIEWED<br>ON A TV</span><span class="b88 d">ON AIR<br>24/7</span></div></div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="links"><a href="./">Home</a> | <a href="features.html">Features</a> | <a href="download.html">Download</a> | <a href="support.html">Support</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a> | <a href="mailto:phosphorplugin@proton.me">Contact Us</a></div>
+    &copy; 2026 Phosphor. All rights reserved.
+    <small>Screenshots show public-domain films and art. Phosphor is an independent project and is not affiliated with Jellyfin or Roku.</small>
+  </div>
+</div>
+<div class="below">This site is best viewed at 800&times;600 or higher.</div>
 </body></html>

@@ -1,29 +1,22 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="favicon.png"><title>Phosphor Support</title><style>
-:root{--bg:#0b2d4f;--bg2:#123f6b;--ink:#eaf6ff;--soft:#b9d4ea;--tan:#ff982e;--card:rgba(255,255,255,.07);--line:rgba(234,246,255,.16)}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font:17px/1.6 "Segoe UI","Open Sans",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg2),var(--bg) 420px) fixed;background-color:var(--bg);min-height:100vh}
-header{border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header .wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.brand{margin-right:auto;display:flex}.brand img{height:36px;width:auto;display:block}
-.hero{display:block;width:100%;max-width:520px;height:auto;margin:0 0 22px}
-nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--soft);text-decoration:none;font-size:15px}
-nav a:hover,nav a[aria-current]{color:var(--tan)}
-main{padding:36px 0 56px}
-h1{font-size:34px;line-height:1.2;margin:0 0 6px;font-weight:600}
-h2{font-size:21px;margin:34px 0 8px;font-weight:600}
-p,li{color:var(--soft)}strong{color:var(--ink)}
-a{color:var(--tan)}
-.meta{color:var(--soft);font-size:14px;margin-bottom:26px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:18px 0}
-ul{padding-left:22px}
-footer{border-top:1px solid var(--line);color:var(--soft);font-size:14px}
-footer .wrap{padding-top:18px;padding-bottom:28px}
-</style></head>
-<body><header><div class="wrap"><a class="brand" href="./"><img src="logo.png" alt="Phosphor" height="36"></a><nav><a href="./">About</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="support.html" aria-current=page>Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
-<main><div class="wrap">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.png"><title>Phosphor Support</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="page">
+  <div class="mast">
+    <a href="./"><img src="logo_web.png" alt="Phosphor"></a>
+    <span class="tag">Your library, on the air.</span>
+    <div class="util"><a href="support.html">Help</a> &nbsp;|&nbsp; <a href="mailto:phosphorplugin@proton.me">Contact us</a> &nbsp;|&nbsp; <a href="features.html">Site map</a></div>
+    <div class="jumpto"><label for="jumpsel">Jump to:</label><select id="jumpsel"><option value="features.html">Features</option><option value="download.html">Download</option><option value="support.html">Support</option><option value="privacy.html">Privacy policy</option><option value="terms.html">Terms of use</option></select><button class="go" type="button" onclick="location.href=document.getElementById('jumpsel').value">GO</button></div>
+  </div>
+  <div class="tabs"><a href="./">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a class="on" href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  <div class="sub"><a href="./">Welcome</a><span>|</span><a href="./#news">What's New</a><span>|</span><a href="./#how">How It Works</a><span>|</span><a href="support.html">FAQ</a><span class="date">Version 1.1 &middot; for Roku and Jellyfin</span></div>
+  <div class="cols inner">
+    <div>
+      <div class="navbox"><div class="hd navy">Get Phosphor</div><ul><li><a href="download.html#roku">Roku app</a></li><li><a href="download.html#plugin">Jellyfin plugin</a></li><li class="here"><a href="support.html">Getting help</a></li></ul></div>
+      <div class="navbox"><div class="hd">On the TV</div><ul><li><a href="features.html#guide">Program guide</a></li><li><a href="features.html#channels">Channels</a></li><li><a href="features.html#breaks">Commercial breaks</a></li><li class="new"><a href="features.html#promos">Promos</a></li><li><a href="features.html#onscreen">On screen</a></li><li><a href="features.html#weather">Weather channel</a></li><li><a href="features.html#music">Music stations</a></li></ul></div>
+      <div class="navbox"><div class="hd">Setting up</div><ul><li><a href="features.html#setup">The setup page</a></li><li><a href="features.html#build">Build a channel</a></li><li><a href="features.html#home">Around the house</a></li></ul></div>
+      <div class="navbox"><div class="hd">Help</div><ul><li class="here"><a href="support.html">Common questions</a></li><li><a href="mailto:phosphorplugin@proton.me">Contact us</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
+    </div>
+    <div class="content">
+
 <h1>Support</h1>
 <p class="meta">Help with the Phosphor Roku app and plugin</p>
 <div class="card"><p style="margin:0">Email <a href="mailto:phosphorplugin@proton.me"><strong>phosphorplugin@proton.me</strong></a> with what happened, what you expected, and which channel you were on. We usually reply within a few days.</p></div>
@@ -35,6 +28,14 @@ footer .wrap{padding-top:18px;padding-bottom:28px}
 <p>Most files play directly. Some formats have to be converted by your Jellyfin server first, which can take several seconds, especially without hardware acceleration turned on in Jellyfin's playback settings.</p>
 <h2>The weather channel is empty</h2>
 <p>Pick your location on the plugin's Weather page. Weather is available for locations in the United States.</p>
-</div></main>
-<footer><div class="wrap">Phosphor is an independent project and is not affiliated with Jellyfin or Roku. Questions: <a href="mailto:phosphorplugin@proton.me">phosphorplugin@proton.me</a></div></footer>
+
+    </div>
+  </div>
+  <div class="foot">
+    <div class="links"><a href="./">Home</a> | <a href="features.html">Features</a> | <a href="download.html">Download</a> | <a href="support.html">Support</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a> | <a href="mailto:phosphorplugin@proton.me">Contact Us</a></div>
+    &copy; 2026 Phosphor. All rights reserved.
+    <small>Screenshots show public-domain films and art. Phosphor is an independent project and is not affiliated with Jellyfin or Roku.</small>
+  </div>
+</div>
+<div class="below">This site is best viewed at 800&times;600 or higher.</div>
 </body></html>
